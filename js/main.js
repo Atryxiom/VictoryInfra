@@ -17,7 +17,7 @@ siteNav.querySelectorAll('a').forEach((link) => {
 
 // Contact form: opens the visitor's mail client pre-filled with the inquiry.
 // Swap this for a form service (e.g. Formspree) when one is set up.
-const CONTACT_EMAIL = 'victordaet@victorytrading.ph';
+const CONTACT_EMAIL = 'victoryinfrastructurecorp@gmail.com';
 const form = document.getElementById('contact-form');
 const note = document.getElementById('form-note');
 

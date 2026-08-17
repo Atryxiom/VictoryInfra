@@ -733,43 +733,85 @@ textarea:focus-visible {
 }
 
 /* ==========================================================
-   VictoryInfra overrides — sister palette:
-   shared navy family · safety-amber accents · steel greys
+   Victory Infrastructures Company, OPC — brand overrides
+   From LOGO1 + company profile: red #e00010 · gold #f0c000 · cream paper
    ========================================================== */
 
 :root {
-  --teal: #f2b23e;      /* amber replaces teal accents on navy */
-  --lime: #ffc845;      /* safety yellow for CTAs and hero accent */
-  --lime-dark: #d99e17;
-  --green: #b07316;     /* bronze eyebrows on light backgrounds */
+  --navy: #b01218;       /* deep crimson takes the navy role */
+  --navy-deep: #8c0d13;
+  --navy-soft: #d31a22;
+  --teal: #f5c400;       /* gold accents on dark red */
+  --lime: #ffd21f;       /* gold CTAs and hero accent */
+  --lime-dark: #c79b00;
+  --green: #c8161d;      /* red eyebrows on light backgrounds */
+  --bg-alt: #faf6ee;     /* cream paper tone from the profile */
+  --line: #ecdfd0;
+  --shadow: 0 10px 30px rgba(140, 13, 19, 0.09);
 }
 
-/* Text wordmark in place of an image logo (until brand assets arrive) */
-.brand-text {
+/* Brand lockup: logo mark + stacked wordmark */
+.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+
+.brand-mark { width: 48px; height: auto; flex: none; }
+
+.brand-lines { display: flex; flex-direction: column; line-height: 1.1; }
+
+.brand-name {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
   color: var(--navy);
-  text-decoration: none;
-  line-height: 1;
 }
 
-.brand-text .wm-accent { color: var(--lime-dark); }
+.brand-sub {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
 
+.footer-brand .brand { margin-bottom: 1rem; }
 
-/* Hero: pure gradient + subtle "girder" stripes, no photo asset needed */
+.footer-brand .brand-mark { width: 48px; margin-bottom: 0; }
+
+/* Hero: deep red gradient with subtle gold "girder" stripes, no photo */
 .hero {
   background:
     repeating-linear-gradient(
       -55deg,
-      rgba(255, 200, 69, 0.05) 0 22px,
-      rgba(255, 200, 69, 0) 22px 64px
+      rgba(245, 196, 0, 0.06) 0 22px,
+      rgba(245, 196, 0, 0) 22px 64px
     ),
-    linear-gradient(115deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-soft) 100%);
+    linear-gradient(115deg, var(--navy-deep) 0%, #a31016 55%, var(--navy-soft) 100%);
   background-color: var(--navy-deep);
 }
 
 .hero-inner { grid-template-columns: minmax(0, 1fr); }
 
-.hero-content { max-width: 720px; }
+.hero-content { max-width: 760px; }
+
+/* Completed-projects grid (3-up) */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.proj-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.proj-meta { font-size: 0.92rem; color: var(--ink-soft); }
+
+@media (max-width: 860px) {
+  .proj-grid { grid-template-columns: 1fr; }
+  .brand-name { font-size: 0.92rem; }
+}
