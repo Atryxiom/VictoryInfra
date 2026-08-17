@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Victory Infrastructures Company, OPC — Building the Nation's Infrastructure Since 1991</title>
   <meta name="description" content="Victory Infrastructures Company, OPC (formerly Victor M. Daet Construction &amp; Supply) is a PCAB-licensed Philippine contractor specializing in government infrastructure projects — civil works for domestic airports, roadways, flood control systems, buildings, and water pipelines. Over 172 projects completed since 1991.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
@@ -19,7 +17,7 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Victory Infrastructures Company, OPC — home">
-        <img src="assets/logo.png" alt="" class="brand-mark" width="48" height="42">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="46" height="40">
         <span class="brand-lines">
           <span class="brand-name">Victory Infrastructures</span>
           <span class="brand-sub">Company, OPC</span>
@@ -29,7 +27,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#reach">Where We Work</a>
+        <a href="#history">History</a>
         <a href="#leadership">Leadership</a>
         <a href="#contact" class="nav-cta">Contact Us</a>
       </nav>
@@ -42,39 +40,72 @@
   <main id="main">
     <!-- ===== Hero ===== -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>Building the Nation's<br>Infrastructure<br><span class="accent-lime">Since 1991.</span></h1>
-          <p class="hero-lead">
-            Victory Infrastructures Company, OPC is a trusted Philippine
-            contractor specializing in government infrastructure projects —
-            delivering civil works for domestic airports, roadways, flood
-            control systems, buildings, and water pipelines with over three
-            decades of proven excellence.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-lime">Work With Us</a>
-            <a href="#projects" class="btn btn-outline">Our Track Record</a>
-          </div>
+      <div class="container">
+        <h1>Building the nation's infrastructure <span class="accent">since 1991.</span></h1>
+        <p class="hero-lead">
+          Victory Infrastructures Company, OPC is a PCAB-licensed Philippine
+          contractor trusted by government and private institutions — delivering
+          civil works for domestic airports, roadways, flood control systems,
+          buildings, and water pipelines.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-red">Work With Us</a>
+          <a href="#projects" class="btn btn-ghost">See Our Projects</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Trust bar ===== -->
-    <div class="trust-bar" role="presentation">
-      <div class="container trust-inner">
-        <span>PCAB Contractor's License No. 15621</span>
-        <span class="dot" aria-hidden="true"></span>
-        <span>Established March 21, 1991</span>
-        <span class="dot" aria-hidden="true"></span>
-        <span>172+ Projects Completed Nationwide</span>
+    <!-- ===== Stats bar ===== -->
+    <div class="container stats-bar">
+      <div class="stats-inner">
+        <div class="stat">
+          <p class="stat-value">172+</p>
+          <p class="stat-label">Projects completed nationwide</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">35</p>
+          <p class="stat-label">Years of infrastructure experience</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">1991</p>
+          <p class="stat-label">Established March 21, 1991</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">15621</p>
+          <p class="stat-label">PCAB Contractor's License No.</p>
+        </div>
       </div>
     </div>
 
+    <!-- ===== Client seals ===== -->
+    <section class="clients" aria-label="Institutions we have worked with">
+      <div class="container">
+        <p class="clients-title">Trusted by the institutions that build the Philippines</p>
+        <div class="clients-row">
+          <figure class="client-seal">
+            <img src="assets/clients/dpwh.png" alt="Department of Public Works and Highways seal" loading="lazy">
+            <figcaption>Department of Public Works<br>&amp; Highways</figcaption>
+          </figure>
+          <figure class="client-seal">
+            <img src="assets/clients/maynilad.png" alt="Maynilad Water Services logo" loading="lazy">
+            <figcaption>Maynilad Water<br>Services Inc.</figcaption>
+          </figure>
+          <figure class="client-seal">
+            <img src="assets/clients/zambales.png" alt="Province of Zambales official seal" loading="lazy">
+            <figcaption>Provincial Government<br>of Zambales</figcaption>
+          </figure>
+          <figure class="client-seal">
+            <img src="assets/clients/albay.png" alt="Province of Albay official seal" loading="lazy">
+            <figcaption>Provincial Government<br>of Albay</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== About ===== -->
-    <section class="section" id="about">
+    <section class="section section-warm" id="about">
       <div class="container about-grid">
-        <div class="about-intro">
+        <div class="about-copy">
           <p class="eyebrow">About Us</p>
           <h2>Three decades of nation-building</h2>
           <p>
@@ -87,56 +118,57 @@
             since 2009.
           </p>
           <p>
-            With over 35 years of experience in infrastructure development,
-            the company continues to support the Philippines' growth through
-            reliable, high-quality results and a strong commitment to service
-            excellence.
+            With over 35 years of experience in infrastructure development, we
+            continue to support the Philippines' growth through reliable,
+            high-quality results and a strong commitment to service excellence.
           </p>
-        </div>
-        <div class="values-panel">
-          <h3>Our Values</h3>
-          <ul class="values-list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="values-row">
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
               <div><strong>Integrity</strong> through ethical practices</div>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
               <div><strong>Professionalism</strong> and accountability</div>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M4 20V9l6-4v15M10 20V9l7 3v8M20 20v-6"/></svg>
-              <div><strong>Quality, safety &amp; durability</strong> in every project</div>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <div><strong>Quality, safety &amp; durability</strong></div>
+            </div>
+            <div class="value-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
               <div><strong>Teamwork</strong> and community service</div>
-            </li>
-          </ul>
+            </div>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="assets/photos/worker-portrait.jpg" alt="A Victory Infrastructures crew member in safety gear on site" width="900" height="1200" loading="lazy">
         </div>
       </div>
     </section>
 
     <!-- ===== Mission & Vision ===== -->
-    <section class="section section-navy" id="mission">
-      <div class="container mv-grid">
-        <div class="mv-card">
-          <p class="eyebrow eyebrow-teal">Our Mission</p>
-          <p class="mv-text">
-            To be a diversified enterprise delivering cost-effective,
-            high-quality construction services — creating meaningful
-            employment, providing value to our clients, and contributing
-            positively to the communities we serve, while upholding
-            professionalism, continuous improvement, and pride in our people.
-          </p>
-        </div>
-        <div class="mv-card">
-          <p class="eyebrow eyebrow-teal">Our Vision</p>
-          <p class="mv-text">
-            To be a prestigious organization delivering world-class projects
-            in the Philippines, guided by excellence, integrity, and trusted
-            partnerships in nation-building.
-          </p>
+    <section class="section section-red" id="mission">
+      <div class="container">
+        <p class="eyebrow">Our Guiding Principles</p>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <h3>Mission</h3>
+            <p>
+              To be a diversified enterprise delivering cost-effective,
+              high-quality construction services — creating meaningful
+              employment, providing value to our clients, and contributing
+              positively to the communities we serve.
+            </p>
+          </div>
+          <div class="mv-card">
+            <h3>Vision</h3>
+            <p>
+              To be a prestigious organization delivering world-class projects
+              in the Philippines, guided by excellence, integrity, and trusted
+              partnerships in nation-building.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -144,23 +176,21 @@
     <!-- ===== Services ===== -->
     <section class="section" id="services">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Our Services</p>
-          <h2>Construction project execution you can rely on</h2>
-          <p class="section-lead">
-            With a strong operational presence in Quezon City and Valenzuela
-            City, we deliver construction grounded in technical experience,
-            regulatory compliance, and quality workmanship — for both
-            government and private infrastructure projects.
-          </p>
-        </div>
+        <p class="eyebrow">Our Services</p>
+        <h2>Construction project execution you can rely on</h2>
+        <p class="section-lead">
+          With operational presence in Quezon City and Valenzuela City, we
+          deliver construction grounded in technical experience, regulatory
+          compliance, and quality workmanship — for government and private
+          infrastructure projects.
+        </p>
         <div class="card-grid">
           <article class="card">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M6 20l4-14M18 20l-4-14M8 13h8"/></svg>
             </div>
             <h3>Roadways &amp; Airports</h3>
-            <p>Civil works for roadways and domestic airports — built to national standards from earthworks to paving.</p>
+            <p>Civil works for roadways and domestic airports — from earthworks to paving, built to national standards.</p>
           </article>
           <article class="card">
             <div class="card-icon" aria-hidden="true">
@@ -184,102 +214,95 @@
             <p>Public buildings, health offices, and facilities delivered end-to-end from foundation to turnover.</p>
           </article>
         </div>
-        <div class="roles-strip">
-          <h3>Trusted By</h3>
-          <ul>
-            <li>Department of Public Works &amp; Highways</li>
-            <li>Maynilad Water Services</li>
-            <li>Provincial Government of Zambales</li>
-            <li>Provincial Government of Albay</li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <!-- ===== Completed Projects ===== -->
-    <section class="section section-alt" id="projects">
+    <!-- ===== Projects ===== -->
+    <section class="section section-warm" id="projects">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Completed Projects</p>
-          <h2>172+ successful projects, and counting</h2>
-          <p class="section-lead">
-            Three decades of proven excellence — a track record of
-            high-quality output across projects of varying scale, delivered
-            consistently to the highest standards. A few examples:
-          </p>
-        </div>
+        <p class="eyebrow">Completed Projects</p>
+        <h2>172+ successful projects, and counting</h2>
+        <p class="section-lead">
+          Three decades of proven excellence — high-quality output across
+          projects of varying scale, delivered consistently to the highest
+          standards. A few examples:
+        </p>
         <div class="proj-grid">
-          <article class="cap-card">
+          <article class="proj-card">
+            <div class="proj-client">
+              <img src="assets/clients/maynilad.png" alt="Maynilad Water Services logo" loading="lazy">
+              <span>Maynilad Water Services Inc.</span>
+            </div>
             <p class="proj-value">₱61.9M</p>
             <h3>Pipe Expansion Project</h3>
-            <p class="proj-meta">
-              Maynilad Water Services Inc.<br>
-              Imus, Cavite — 2014
-            </p>
+            <p class="proj-meta">Imus, Cavite — 2014</p>
           </article>
-          <article class="cap-card">
+          <article class="proj-card">
+            <div class="proj-client">
+              <img src="assets/clients/zambales.png" alt="Province of Zambales seal" loading="lazy">
+              <span>Provincial Government of Zambales</span>
+            </div>
             <p class="proj-value">₱16.4M</p>
             <h3>Slope Protection &amp; Sea Wall</h3>
-            <p class="proj-meta">
-              Provincial Government of Zambales<br>
-              Zambales — 2020
-            </p>
+            <p class="proj-meta">Zambales — 2020</p>
           </article>
-          <article class="cap-card">
+          <article class="proj-card">
+            <div class="proj-client">
+              <img src="assets/clients/dpwh.png" alt="Department of Public Works and Highways seal" loading="lazy">
+              <span>Department of Public Works &amp; Highways</span>
+            </div>
             <p class="proj-value">₱10.6M</p>
             <h3>Construction of Health Office</h3>
-            <p class="proj-meta">
-              Department of Public Works &amp; Highways<br>
-              Oas, Albay — 2019
-            </p>
+            <p class="proj-meta">Oas, Albay — 2019</p>
           </article>
         </div>
+        <p class="proj-note">Full project record from 1991–2025 available on request.</p>
       </div>
     </section>
 
-    <!-- ===== Where We Work ===== -->
-    <section class="section" id="reach">
-      <div class="container reach-grid">
-        <div>
-          <p class="eyebrow">Where We Work</p>
-          <h2>From the Bicol Region to nationwide delivery</h2>
-          <p class="reach-note">
-            Rooted in the Bicol Region, expanded to Metro Manila in 2003, and
-            headquartered in Valenzuela City since 2009 — with projects
-            completed nationwide.
-          </p>
-        </div>
-        <div class="reach-cols">
-          <div class="reach-col">
-            <h3>Operational presence</h3>
-            <ul>
-              <li>Head office — Maysan, Valenzuela City</li>
-              <li>Metro Manila — Quezon City</li>
-              <li>Project sites nationwide</li>
-            </ul>
-          </div>
-          <div class="reach-col">
-            <h3>Who we serve</h3>
-            <ul>
-              <li>National government agencies</li>
-              <li>Provincial and local governments</li>
-              <li>Water utilities and private organizations</li>
-            </ul>
-          </div>
-        </div>
+    <!-- ===== History ===== -->
+    <section class="section" id="history">
+      <div class="container">
+        <p class="eyebrow">Company History</p>
+        <h2>From the Bicol Region to nationwide delivery</h2>
+        <p class="section-lead">
+          Rooted in the Bicol Region, expanded to Metro Manila, and delivering
+          projects across the country.
+        </p>
+        <ul class="timeline">
+          <li>
+            <p class="tl-year">1991</p>
+            <h3>Founded</h3>
+            <p>Established March 21, 1991 as Victor M. Daet Construction &amp; Supply, serving the Bicol Region.</p>
+          </li>
+          <li>
+            <p class="tl-year">1992</p>
+            <h3>PCAB Licensed</h3>
+            <p>Issued Contractor's License No. 15621 by the Philippine Contractors Accreditation Board.</p>
+          </li>
+          <li>
+            <p class="tl-year">2003</p>
+            <h3>Metro Manila</h3>
+            <p>Expanded operations with a branch office in Quezon City.</p>
+          </li>
+          <li>
+            <p class="tl-year">2009</p>
+            <h3>Valenzuela HQ</h3>
+            <p>Head office relocated to Maysan, Valenzuela City — the company's home today.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- ===== Leadership ===== -->
-    <section class="section section-navy" id="leadership">
+    <section class="section section-warm" id="leadership">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow eyebrow-teal">Leadership</p>
-          <h2 class="on-navy">Led by decades of hands-on experience</h2>
-        </div>
-        <div class="lead-grid">
-          <div class="lead-card">
-            <h3>Ownership &amp; Management</h3>
+        <p class="eyebrow">Leadership</p>
+        <h2>Led by decades of hands-on experience</h2>
+        <p class="section-lead">Centralized leadership with engineering judgment on every project.</p>
+        <div class="lead-card">
+          <div class="lead-seal" aria-hidden="true">VD</div>
+          <div>
             <p class="lead-name">Engr. Victor M. Daet</p>
             <p class="lead-role">President</p>
             <p>
@@ -338,7 +361,7 @@
             <label for="cf-message">Message</label>
             <textarea id="cf-message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-navy btn-block">Send Inquiry</button>
+          <button type="submit" class="btn btn-red btn-block">Send Inquiry</button>
           <p class="form-note" id="form-note" role="status"></p>
         </form>
       </div>
@@ -350,7 +373,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="brand">
-          <img src="assets/logo.png" alt="" class="brand-mark" width="48" height="42">
+          <img src="assets/logo.png" alt="" class="brand-mark" width="46" height="40">
           <span class="brand-lines">
             <span class="brand-name">Victory Infrastructures</span>
             <span class="brand-sub">Company, OPC</span>
@@ -360,21 +383,21 @@
           A PCAB-licensed Philippine contractor building progress with
           quality, safety, and integrity — a member of the Victory group
           alongside
-          <a href="https://victorytrading.ph" style="color: inherit;">Victory Import and Export Trading</a>.
+          <a href="https://victorytrading.ph">Victory Import and Export Trading</a>.
         </p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#reach">Where We Work</a>
+        <a href="#history">History</a>
         <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
     <div class="container footer-legal">
       <p>&copy; <span id="year">2026</span> Victory Infrastructures Company, OPC. All rights reserved.</p>
-      <p class="footer-tagline">Building the Nation's Infrastructure Since 1991.</p>
+      <p class="gold">Building the Nation's Infrastructure Since 1991.</p>
     </div>
   </footer>
 
