@@ -30,7 +30,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp index.html _site/
+          cp index.html projects.html _site/
           cp -r css js assets _site/
 
       - uses: actions/configure-pages@v5

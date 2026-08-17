@@ -21,7 +21,7 @@ const CONTACT_EMAIL = 'victoryinfrastructurecorp@gmail.com';
 const form = document.getElementById('contact-form');
 const note = document.getElementById('form-note');
 
-form.addEventListener('submit', (event) => {
+if (form) form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (!form.checkValidity()) {

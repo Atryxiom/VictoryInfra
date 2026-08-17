@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Record — Victory Infrastructures Company, OPC</title>
+  <meta name="description" content="The complete project record of Victory Infrastructures Company, OPC (formerly Victor M. Daet Construction &amp; Supply): completed and ongoing infrastructure projects since the 1990s for DPWH, Maynilad, provincial governments, airports, and more.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Victory Infrastructures Company, OPC — home">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="46" height="40">
+        <span class="brand-lines">
+          <span class="brand-name">Victory Infrastructures</span>
+          <span class="brand-sub">Company, OPC</span>
+        </span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="index.html#history">History</a>
+        <a href="index.html#leadership">Leadership</a>
+        <a href="index.html#contact" class="nav-cta">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Project Record</p>
+        <h1>Every project tells our story</h1>
+        <p class="page-hero-lead">
+          The complete record of completed and ongoing projects by Victory
+          Infrastructures Company, OPC and its predecessor Victor M. Daet
+          Construction &amp; Supply — water systems, roadways, flood control,
+          bridges, schools, airports, and public facilities across the
+          Philippines.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Record ===== -->
+    <section class="section" id="record">
+      <div class="container">
+        <div class="record-stats" id="record-stats" aria-live="polite"></div>
+
+        <div class="record-controls">
+          <div class="form-field record-search">
+            <label for="rec-search">Search projects</label>
+            <input type="search" id="rec-search" placeholder="e.g. bridge, Zambales, pipe…" autocomplete="off">
+          </div>
+          <div class="form-field">
+            <label for="rec-client">Client</label>
+            <select id="rec-client">
+              <option value="">All clients</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="rec-status">Status</label>
+            <select id="rec-status">
+              <option value="">All</option>
+              <option value="Completed">Completed</option>
+              <option value="Ongoing">Ongoing</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="record-wrap">
+          <table class="record-table">
+            <thead>
+              <tr>
+                <th scope="col" class="col-year">Year</th>
+                <th scope="col">Project</th>
+                <th scope="col">Client</th>
+                <th scope="col">Status</th>
+                <th scope="col" class="col-amt">Contract Amount</th>
+              </tr>
+            </thead>
+            <tbody id="record-body"></tbody>
+          </table>
+        </div>
+        <p class="proj-note">
+          Record compiled from the company's official list of completed and
+          ongoing projects. Certified copies available on request —
+          <a href="index.html#contact">contact us</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand">
+          <img src="assets/logo.png" alt="" class="brand-mark" width="46" height="40">
+          <span class="brand-lines">
+            <span class="brand-name">Victory Infrastructures</span>
+            <span class="brand-sub">Company, OPC</span>
+          </span>
+        </span>
+        <p class="footer-tag">
+          A PCAB-licensed Philippine contractor building progress with
+          quality, safety, and integrity — a member of the Victory group
+          alongside
+          <a href="https://victorytrading.ph">Victory Import and Export Trading</a>.
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#history">History</a>
+        <a href="index.html#leadership">Leadership</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>&copy; <span id="year">2026</span> Victory Infrastructures Company, OPC. All rights reserved.</p>
+      <p class="gold">Building the Nation's Infrastructure Since 1991.</p>
+    </div>
+  </footer>
+
+  <script>
+  // Project record — compiled from the company's official project list.
+  // Fields: y = year of completion (0 = ongoing/undated), d = details, c = client, s = status, a = contract amount (PHP, 0 = not stated)
+  const PROJECTS = [
+    {y:0,d:"Massive Meter Replacement (CXRO-26-MMR-MV-01C)",c:"Maynilad (MWSI)",s:"Ongoing",a:0},
+    {y:0,d:"All Works for Malabon-Valenzuela Business Area (CXRO-26-AW-MV-02C)",c:"Maynilad (MWSI)",s:"Ongoing",a:5000000},
+    {y:0,d:"All Works for Malabon-Valenzuela Business Area (CXRO-26-AW-NR-MV-03C)",c:"Maynilad (MWSI)",s:"Ongoing",a:3000000},
+    {y:2025,d:"Massive Meter Replacement (CXRO-25-MMR-MV-01C)",c:"Maynilad (MWSI)",s:"Completed",a:0},
+    {y:2025,d:"All Works for Malabon-Valenzuela Business Area (CXRO-25-AW-MV-01C)",c:"Maynilad (MWSI)",s:"Completed",a:19255266.09},
+    {y:2025,d:"All Works for Malabon-Valenzuela Business Area (CXRO-25-AW-NR-MV-02C)",c:"Maynilad (MWSI)",s:"Completed",a:7000000},
+    {y:2025,d:"All Works for Malabon-Valenzuela Business Area (CXRO-25-AW-NR-MV-01C)",c:"Maynilad (MWSI)",s:"Completed",a:8888349.45},
+    {y:2025,d:"Construction of Slope Protection Works along Takar River Phase II, Iba, Zambales",c:"Provincial Government of Zambales",s:"Completed",a:34905079.91},
+    {y:2025,d:"Construction of Steel Bridge at Sitio Pasig, Brgy. Tapuac, Masinloc",c:"Provincial Government of Zambales",s:"Completed",a:9962167.05},
+    {y:2025,d:"Construction of Series of Box Culverts and Slope Protection in Brgy. Pinagrealan, Candelaria",c:"Provincial Government of Zambales",s:"Completed",a:29952180.01},
+    {y:2024,d:"2024 All Works Contract (CXRO-24-MV-AW-02C, NR1 & NR2)",c:"Maynilad (MWSI)",s:"Completed",a:24700000},
+    {y:2024,d:"2023 Partial Pipe Replacement in HS Damong Maliit at 03-NOV04W (Llano–T. Samson), Caloocan City, North Caloocan Business Area (NR-23-CIP-NCL-01)",c:"Maynilad (MWSI)",s:"Completed",a:25858831.51},
+    {y:2024,d:"2024 All Works Contract (CXRO-24-MV-AW-01C)",c:"Maynilad (MWSI)",s:"Completed",a:22920000},
+    {y:2024,d:"EMF Replacement in 14 Various Locations in Valenzuela City (NR-23-MM-MVL-01)",c:"Maynilad (MWSI)",s:"Completed",a:7423696},
+    {y:2024,d:"EMF Replacement in 4 Various Locations in Malabon City (NR-23-MM-MVL-02)",c:"Maynilad (MWSI)",s:"Ongoing",a:2309384},
+    {y:2024,d:"2024 Total Pipe Replacement in HS Naga Loop at 32-MLP026L (Citadella), Las Piñas City, Muntinlupa-Las Piñas Business Area (NR-24-SDS-MLP-02)",c:"Maynilad (MWSI)",s:"Ongoing",a:67311240.12},
+    {y:2023,d:"Construction of Multi-Purpose Covered Court, Brgy. Babuyan, Sta. Cruz (Infra 38-2022)",c:"Provincial Government of Zambales",s:"Completed",a:6447900},
+    {y:2023,d:"Completion of Ten (10) Classroom Multi-Purpose E-Building, Bancol Elementary School, Sta. Cruz",c:"Provincial Government of Zambales",s:"Completed",a:4960994.41},
+    {y:2023,d:"Construction of Multi-Purpose Covered Court, Bayto Elementary School, Sta. Cruz (Infra 67-2022)",c:"Provincial Government of Zambales",s:"Completed",a:4962735},
+    {y:2023,d:"Construction of Multi-Purpose Covered Court, Gama Elementary School, Sta. Cruz (Infra 67-2022)",c:"Provincial Government of Zambales",s:"Completed",a:5958457.84},
+    {y:2023,d:"Construction of Two Storey 10 Classroom School Building, Phase 1, Longos IS",c:"Provincial Government of Zambales",s:"Completed",a:8941039.33},
+    {y:2023,d:"Construction of Multi-Purpose Covered Court, Rosete, San Felipe",c:"Provincial Government of Zambales",s:"Completed",a:3967079.42},
+    {y:2023,d:"Slope Protection of Vega River at Brgy. Patrocinio, San Narciso",c:"Provincial Government of Zambales",s:"Completed",a:4957828.66},
+    {y:2022,d:"Improvement of Castilla Water System",c:"LGU Castilla, Sorsogon",s:"Completed",a:149395592.85},
+    {y:2022,d:"Construction of Covered Court, Candelaria School of Fisheries, Candelaria (Infra 67-2022)",c:"Provincial Government of Zambales",s:"Completed",a:5960250},
+    {y:2022,d:"Construction of Multi-Purpose Covered Court, East Dirita Elementary School – Phase 1, San Antonio (Infra 20-2022)",c:"Provincial Government of Zambales",s:"Completed",a:2968660.67},
+    {y:2022,d:"Construction of Covered Court, Sagpat ES, San Felipe (Infra 67-2022)",c:"Provincial Government of Zambales",s:"Completed",a:5958787.88},
+    {y:2022,d:"Slope Protection Works at Sitio Bunglo, Brgy. Pinagrealan, Candelaria, Zambales Phase II (Infra 31-2022)",c:"Provincial Government of Zambales",s:"Completed",a:24873053.01},
+    {y:2022,d:"Rehabilitation of the Damaged Dike, Brgy. Cadmang, Cabangan (Infra 94-2022)",c:"Provincial Government of Zambales",s:"Completed",a:29898311.62},
+    {y:2021,d:"Construction of Ten (10) Classroom Multi-Purpose Phase I E-Building, Bancol ES, Sta. Cruz (Infra 53-2021)",c:"Provincial Government of Zambales",s:"Completed",a:21897876.30},
+    {y:2021,d:"Additional Slope Protection Works along Uacon River and Construction of Spur Dike for Protection of Irrigation Canal at Brgy. Pinagrealan, Candelaria (Infra 68/69-2021)",c:"Provincial Government of Zambales",s:"Completed",a:12389494.26},
+    {y:2021,d:"Construction of Multi-Purpose Covered Courts, Panan, Botolan (Infra 61-2021)",c:"Provincial Government of Zambales",s:"Completed",a:5955985},
+    {y:2021,d:"Completion of Elevator Facility, Balin Sambali, Zambales Sports Complex and Legislative Building, Iba (Infra 59-2021)",c:"Provincial Government of Zambales",s:"Completed",a:10917750.84},
+    {y:2020,d:"Slope Protection along Lauis River at Binalian Section, Candelaria & Construction of Sea Wall at Pruok 1, Lucapon, Sta. Cruz",c:"Provincial Government of Zambales",s:"Completed",a:16456597.83},
+    {y:2020,d:"Construction of Multi-Purpose Covered Court, Brgy. Arew, Cabangan",c:"Provincial Government of Zambales",s:"Completed",a:9946471.72},
+    {y:2020,d:"Rehabilitation of Steel Bridges at Brgy. Felmida Diaz and Cadmang Reserva, Cabangan",c:"Provincial Government of Zambales",s:"Completed",a:18725782.85},
+    {y:2020,d:"Upgrading of Balin Samball, Construction of Elevator Facility and Connecting Bridge, Zambales Sports Complex",c:"Provincial Government of Zambales",s:"Completed",a:41470170.91},
+    {y:2019,d:"Rehabilitation/Construction/Improvement/Upgrade/Completion/Expansion of Oas RHU II, Oas, Albay (18F00123)",c:"DPWH – 3rd DEO",s:"Completed",a:10688587.38},
+    {y:2019,d:"Site Development & Construction of Facilities, Albay Treatment and Rehabilitation Center, Tula-Tula Grande, Ligao City",c:"Province of Albay",s:"Completed",a:12923474.76},
+    {y:2018,d:"Construction of Various Water Supply Projects, Pilar, Sorsogon",c:"DPWH – Region V",s:"Completed",a:42434097.96},
+    {y:2018,d:"Construction of One-Storey Two-Classroom Building, Cabangahan Elementary School, Cantilan, Surigao del Sur",c:"DPWH – Surigao",s:"Completed",a:2990614.45},
+    {y:2018,d:"Construction of Multi-Purpose Building (Health Center), Brgy. Lobo, Cantilan, Surigao del Sur",c:"DPWH – Surigao",s:"Completed",a:1880515.23},
+    {y:2018,d:"Construction of Barangay Road, Brgy. Consuelo, Cantilan, Surigao del Sur",c:"DPWH – Surigao",s:"Completed",a:1873906.30},
+    {y:2017,d:"Rehabilitation of Passenger Terminal Building at Laguindingan Airport",c:"CAAP – Laguindingan",s:"Completed",a:4561045.08},
+    {y:2017,d:"Vegetation Control of Masbate Airport",c:"CAAP – Masbate",s:"Completed",a:230419.35},
+    {y:2017,d:"Repair/Repainting of Runway Markers/Marking of Masbate Airport",c:"CAAP – Masbate",s:"Completed",a:403326.25},
+    {y:2014,d:"Proposed 4-Storey 14-Classroom Alternative Learning School, Parada (Partial Construction of 2-Storey 7-Classroom with Deck)",c:"City Government of Valenzuela",s:"Completed",a:12368994.20},
+    {y:2014,d:"2013 Partial Pipe Replacement for HS Quezon Ave. & E. Rodriguez (Z11), Quirino/Roosevelt Business Area (NR-13-QR20-WN-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:42660264.87},
+    {y:2014,d:"Pipe Expansion Projects for HA33 (Cav-Z02), Open Communities, Bayan Subd., Imus, Cavite (SE-12-CAV-HA33-Z02-01)",c:"Maynilad (MWSI)",s:"Completed",a:61956660.25},
+    {y:2014,d:"Leak Repair (CNRW-14-AWST-MN-01)",c:"Maynilad (MWSI)",s:"Completed",a:6000000},
+    {y:2014,d:"Leak Repair (CNRW-14-AWST-MN-02)",c:"Maynilad (MWSI)",s:"Completed",a:3000000},
+    {y:2014,d:"All Works (BAO-14-AW-MN-01)",c:"Maynilad (MWSI)",s:"Completed",a:7440000},
+    {y:2014,d:"2013 Partial Pipe Replacement for HS EDSA/Muñoz & Muñoz/Del Monte Ave., Roosevelt, Quirino/Roosevelt Business Area, Packages 2 & 3 (NR-13-QR15-Z10-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:36212530.98},
+    {y:2013,d:"2013 Partial Pipe Replacement for HS Plaridel (Z12), Kapiligan & Guirayan, Sampaloc, Package 1 (NR-13-QR20-Z12-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:18965653.55},
+    {y:2013,d:"Allworks (N-AW-NVBA-001-13)",c:"Maynilad (MWSI)",s:"Completed",a:15000000},
+    {y:2013,d:"Massive Metering (OP-CNRW-SMM-003-13)",c:"Maynilad (MWSI)",s:"Completed",a:24000000},
+    {y:2013,d:"Leak Repair (N-CNRW-AWVN-002-12)",c:"Maynilad (MWSI)",s:"Completed",a:12000000},
+    {y:2013,d:"2012 Pipe Expansion Project for HA-33 (CLP), Cavite/Las Piñas Business Area, Open Community, Package 4 (3R-12-CL-HA33-Z02-04)",c:"Maynilad (MWSI)",s:"Completed",a:33441351.74},
+    {y:2013,d:"2012 Total Pipe Replacement of ACP Mains in Sumilang Subd., Novaliches/Valenzuela Business Area (AU-12-ACP-NV04-PR-01)",c:"Maynilad (MWSI)",s:"Completed",a:5078745.32},
+    {y:2012,d:"Additional Works for 2012 Partial Pipe Replacement for HA04 (Z03) at G. Lazaro–Esteban (NR-12-NV04-Z03-ST-01A)",c:"Maynilad (MWSI)",s:"Completed",a:2037995.39},
+    {y:2012,d:"Leak Repair (N-CNRW-AWVN-002-12)",c:"Maynilad (MWSI)",s:"Completed",a:23000000},
+    {y:2012,d:"Allworks (N-AW-NVBA-001-12)",c:"Maynilad (MWSI)",s:"Completed",a:12000000},
+    {y:2012,d:"Improvement of Road & Wooden Footbridge at Tagalag, Valenzuela City (No. 043-RD/Bridge-Tagalag-Infra-2011)",c:"City Government of Valenzuela",s:"Completed",a:3450103.28},
+    {y:2012,d:"2012 Partial Pipe Replacement for HA04 (Z03), Valenzuela/Novaliches Business Area (NR-12-NV-HA04-Z03-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:14593152.87},
+    {y:2012,d:"2012 Pipe Replacement due to Road Under Construction for HA04 (Z03) along Pasolo, Valenzuela (RUC-12-NV04-Z03-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:6227991.90},
+    {y:2012,d:"2012 Partial Pipe Replacement for HA11 (Z03 & Z02) along Gov. Pascual, Malabon City (NR-11-MN11-Z03-ST-03)",c:"Maynilad (MWSI)",s:"Completed",a:4939048},
+    {y:2012,d:"2012 Pipe Expansion Project for HA-04 (Z06), Valenzuela/Novaliches Business Area (3R-12-NV-HA04-Z06-02)",c:"Maynilad (MWSI)",s:"Completed",a:39000000},
+    {y:2012,d:"2012 Partial Pipe Replacement for HA05 (Z06) at 05-FRV06, South Fairview, Quezon City (NR-12-FCOM-BA-PR-03)",c:"Maynilad (MWSI)",s:"Completed",a:11825902.92},
+    {y:2012,d:"Construction of Day Care Centers at Canumay & Punturin, Valenzuela City (No. 040-Daycare Center-CAN/PUN-Infra-2011)",c:"City Government of Valenzuela",s:"Completed",a:2140367.98},
+    {y:2012,d:"2012 Pipe Expansion for HA-04 (Nval-Z06), Novaliches-Valenzuela Business Area, Northville 1B & Mahabang Parang (SE-12-NV-HA04-Z06-01)",c:"Maynilad (MWSI)",s:"Completed",a:16026387.48},
+    {y:2011,d:"Allworks and Leak Repair (N-AW-VABA-001-11)",c:"Maynilad (MWSI)",s:"Completed",a:23000000},
+    {y:2011,d:"2011 Partial Pipe Replacement for HA04 (VAL-1L & 2F), Valenzuela City, Package 2 (NR-11-CMD-VN-Z02-02)",c:"Maynilad (MWSI)",s:"Completed",a:7815937.10},
+    {y:2011,d:"Leak Repair (N-CNRW-AWVA-001-11)",c:"Maynilad (MWSI)",s:"Completed",a:18000000},
+    {y:2011,d:"2011 Partial Pipe Replacement for HA04 (VAL-4J & 3D), Valenzuela City (NR-11-NV04-Z02-ST-01)",c:"Maynilad (MWSI)",s:"Completed",a:21577982.21},
+    {y:2011,d:"2011 Partial Pipe Replacement due to RUC for HA04 (Z03) along Don Pedro Subd., Marulas (NR-11-NV04-Z02-ST-04)",c:"Maynilad (MWSI)",s:"Completed",a:2255878.62},
+    {y:2011,d:"2011 Partial Pipe Replacement due to RUC along NPC Rd., Novaliches/Valenzuela Business Area (NR-11-NV03-Z06-ST-05)",c:"Maynilad (MWSI)",s:"Completed",a:1596784.08},
+    {y:2011,d:"2011 Partial Pipe Replacement of Various Locations in Valenzuela Area (3R-11-NV-HA04-Z04-01)",c:"Maynilad (MWSI)",s:"Completed",a:39208499.06},
+    {y:2010,d:"Asphalting of 5th St., Brgy. West Tapinac, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1891361.15},
+    {y:2010,d:"Asphalting of Caron St. (20th to 25th St.), West Bajac, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2836849.66},
+    {y:2010,d:"Asphalting & Drainage of Holy Spirit, Tabacuhan, Sta. Rita, Olongapo City — Flood Control/Drainage",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2350000},
+    {y:2010,d:"Asphalting & Drainage of Holy Spirit, Tabacuhan, Sta. Rita, Olongapo City — Roads Rehabilitation",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:7106797.93},
+    {y:2010,d:"Asphalting of Otero Avenue Extension, Gordon Heights, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2837026.81},
+    {y:2010,d:"Asphalting of Long Road, Gordon Heights, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:4728339.65},
+    {y:2010,d:"Asphalting of Narra Lane, Old Cabalan, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2837037.62},
+    {y:2010,d:"Asphalting of Manga St., Barretto, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1891274.21},
+    {y:2010,d:"Asphalting & Drainage System of Norton St., Kalalake, Olongapo City — Flood Control/Drainage",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1000000},
+    {y:2010,d:"Asphalting & Drainage System of Norton St., Kalalake, Olongapo City — Roads Construction",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2782814.71},
+    {y:2010,d:"Asphalting & Drainage System of Mahogany St., Barretto, Olongapo City — Flood Control/Drainage",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1000000},
+    {y:2010,d:"Asphalting & Drainage System of Mahogany St., Barretto, Olongapo City — Roads Construction",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2782800.61},
+    {y:2010,d:"Asphalting of Upper Domingo St., Gordon Heights, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1891417.15},
+    {y:2010,d:"Asphalting of Gumamela St., New Cabalan, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:2837039.05},
+    {y:2010,d:"Asphalting of Abra St., Barretto, Olongapo City — Flood Control/Drainage",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:1325000},
+    {y:2010,d:"Asphalting of Drainage System at Abra St., Barretto, Olongapo City",c:"DPWH – Zambales 2nd Engineering Office",s:"Completed",a:3403319.11},
+    {y:2010,d:"Leak Repair (N-CNRW-AWVA-001-10)",c:"Maynilad (MWSI)",s:"Completed",a:4000000},
+    {y:2010,d:"Allworks and Leak Repair (N-AW-VABA-001-10)",c:"Maynilad (MWSI)",s:"Completed",a:7897803},
+    {y:2010,d:"2010 Replacement for HA-04, Valenzuela Business Area, Package 1 (3R-10-VA-HA04-Z02-01)",c:"Maynilad (MWSI)",s:"Completed",a:11342228.34},
+    {y:2010,d:"2010 Replacement for HA-04, Valenzuela Business Area, Package 2 (3R-10-VA-HA04-Z02-02)",c:"Maynilad (MWSI)",s:"Completed",a:12062891.59},
+    {y:2010,d:"2011 Partial Pipe Replacement for HA04 (VAL-4J & 3D), Valenzuela City, Package 3 (NR-11-CMD-VN-Z03-01)",c:"Maynilad (MWSI)",s:"Completed",a:5687087.61},
+    {y:2009,d:"Pipelaying Extension for HA-04 Val-Z(2,3,4) under CMD Improvement Project (3R-VA-HA04-Z(2,3,4)-001)",c:"Maynilad (MWSI)",s:"Completed",a:6999999.83},
+    {y:2009,d:"Total Pipe Replacement for HA18 (SAMZ1, Sub Zone E), Package 1 (3R-09-SA-HA18-Z1-002)",c:"Maynilad (MWSI)",s:"Completed",a:6100000},
+    {y:2009,d:"Pipe Extension for HA03-Z9, Sub-Zone E, Valenzuela City (3R-08-VA-HA03-Z9-005)",c:"Maynilad (MWSI)",s:"Completed",a:12800000},
+    {y:2009,d:"Pipe Rehabilitation for HA20 (SA-Z9), Sub-Zone E, Sampaloc (3R-08-SA-HA20-Z9-005)",c:"Maynilad (MWSI)",s:"Completed",a:12000000},
+    {y:2009,d:"Diagnostic Project at Roosevelt (3R-07-RV-HA15-Z9-004)",c:"Maynilad (MWSI)",s:"Completed",a:9667645.49},
+    {y:2009,d:"DMA Sustenance (S-DMA-(S/M)-VABA-001-09)",c:"Maynilad (MWSI)",s:"Completed",a:500000},
+    {y:2009,d:"Allworks and Leak Repair (N-CNRW-AWVA-001-09)",c:"Maynilad (MWSI)",s:"Completed",a:5000000},
+    {y:2009,d:"Allworks and Leak Repair (N-AW-VABA-001-09)",c:"Maynilad (MWSI)",s:"Completed",a:11000000},
+    {y:2009,d:"Allworks and Leak Repair (N-AW-VABA-001-09)",c:"Maynilad (MWSI)",s:"Completed",a:3000000},
+    {y:2009,d:"Pipelaying Extension for HA-04 (Val-Z3) under CMD RUC Improvement Projects (3R-08-VA-HA04-Z4-001)",c:"Maynilad (MWSI)",s:"Completed",a:3320974.29},
+    {y:2008,d:"Pipelaying Extension for HA-04 (Val-Z4) under CMD RUC Improvement Projects (3R-08-VA-HA04-Z4-002)",c:"Maynilad (MWSI)",s:"Completed",a:612757.53},
+    {y:2008,d:"Pipelaying Extension for HA-04 Val-Z4 under CMD Improvement Projects (3R-08-VA-HA04-Z4-003)",c:"Maynilad (MWSI)",s:"Completed",a:11204268.61},
+    {y:2008,d:"Allworks and Leak Repair (N-AWLR-VABC-001-08 / N-AWLR-VABC-002-08)",c:"Maynilad (MWSI)",s:"Completed",a:16000000},
+    {y:2007,d:"Supply and Installation of 55 District Meter Assemblies & Isolation Valves for North Business Region (NC-6ZM-COWN-001S-06)",c:"Maynilad (MWSI)",s:"Completed",a:20000000},
+    {y:2007,d:"Allworks and Leak Repair (N-AWLR-VABC-001-07 / N-AWLR-VABC-002-07)",c:"Maynilad (MWSI)",s:"Completed",a:8000000},
+    {y:2006,d:"Construction of Commercial Business Park Phase III, BUCAS Campus, Daraga, Albay",c:"Bicol University",s:"Completed",a:876210.98},
+    {y:2006,d:"Repair/Improvement of the Office of the Vice President, BU Main Campus, Legazpi City",c:"Bicol University",s:"Completed",a:168097.41},
+    {y:2006,d:"Repair of Toilets at Chemical Engineering, BUCENG Campus, Legazpi City",c:"Bicol University",s:"Completed",a:125564.71},
+    {y:2006,d:"Repair of Girls Trade Building, Bicol University, Legazpi City",c:"Bicol University",s:"Completed",a:838992.48},
+    {y:2006,d:"Facelifting and Landscaping, General Administration Frontage, Bicol University, Legazpi City",c:"Bicol University",s:"Completed",a:683796.72},
+    {y:2006,d:"Rehabilitation of Basketball Court, LGU Camalig, Albay",c:"LGU Camalig, Albay",s:"Completed",a:1154426.24},
+    {y:2006,d:"Improvement of Tennis Court & Illumination of Street Lights, Camalig, Albay",c:"LGU Camalig, Albay",s:"Completed",a:979190.28},
+    {y:2006,d:"Various Infra Projects Package 2 — Tennis Club House & Tennis Court",c:"LGU Camalig, Albay",s:"Completed",a:735032.21},
+    {y:2006,d:"Virac Airport Development Project — Obstruction Removal & Construction",c:"DOTC",s:"Completed",a:4295566.90},
+    {y:2006,d:"Virac Airport Development Project — Rehabilitation of Terminal Building",c:"DOTC",s:"Completed",a:952375.04},
+    {y:2006,d:"New Legazpi Airport Development Project — Parcellary Survey",c:"DOTC",s:"Completed",a:2471840},
+    {y:2006,d:"Allworks and Leak Repair (AW-NWVA-003-06)",c:"Maynilad (MWSI)",s:"Completed",a:4000000},
+    {y:2006,d:"Allworks and Leak Repair (N-AWLR-VABC-001-06)",c:"Maynilad (MWSI)",s:"Completed",a:5000000},
+    {y:2005,d:"Restoration Works of Affected Pavement for Mainline Replacement by MWCI along Rev. Aglipay St. and Boni Avenue, Mandaluyong City",c:"MWCI-DPWH",s:"Completed",a:2236147},
+    {y:2005,d:"Restoration Works of Damaged Road Pavement affected by MWCI Project along P. Ocampo, Bgy. La Paz, Makati City",c:"MWCI-DPWH",s:"Completed",a:3078547.73},
+    {y:2005,d:"Masbate Airport Development Project — Continuation of Upgrading/Correction of Runway Shoulders",c:"DOTC",s:"Completed",a:1918492.49},
+    {y:2005,d:"Proposed Fence (Squatted Area), Phase Guinobatan, Albay",c:"Bicol University",s:"Completed",a:875153.20},
+    {y:2005,d:"Leak Repair (AW-NWVA-003-05)",c:"MWSI – Valenzuela Sector",s:"Completed",a:4000000},
+    {y:2004,d:"Lawaan Building, Bicol University, Legazpi City — Terminal Building",c:"Bicol University",s:"Completed",a:847000},
+    {y:2004,d:"Repair/Restoration Works of Damaged Road Pavements affected by MWCI Project along Gilmore Ave., cor. Aurora Blvd. to E. Rodriguez",c:"MWCI-DPWH",s:"Completed",a:3443853.75},
+    {y:2004,d:"Restoration Works of Damaged Road Pavements, Curb & Gutter affected by MWCI Project along Road 1, Project 6, Quezon City",c:"MWCI-DPWH",s:"Completed",a:929350.50},
+    {y:2004,d:"Restoration Works of Damaged Road Pavements and Curb & Gutter affected by MWCI Project along Road 1, Project 6, Quezon City",c:"MWCI-DPWH",s:"Completed",a:1523551},
+    {y:2004,d:"MWCI/APMC Project — Restoration Works of Damaged Road Pavement and Curb & Gutter along Boni Serrano, Quezon City",c:"MWCI-DPWH",s:"Completed",a:852709.57},
+    {y:2004,d:"MWCI/JFE Engineering Corp. Project — Construction of Community Sanitation Project along Karangalan (K-7), Pasig City",c:"JFE-MWCI",s:"Completed",a:2250000},
+    {y:2004,d:"MWCI Project — Restoration Works of Damaged Road Pavement and Curb & Gutter along Santolan St., San Juan, Metro Manila",c:"MWCI-DPWH",s:"Completed",a:660630.88},
+    {y:2003,d:"Gazelle Hometel & Restaurant, Airport Site, Legaspi City",c:"Victor M. Daet",s:"Completed",a:3800000},
+    {y:2003,d:"Bulan Airport Development Project — Riprapping of Runway / Improvement of Drainage System, Bulan, Sorsogon",c:"LGU Bulan, Sorsogon",s:"Completed",a:1920432.54},
+    {y:2002,d:"Parcellary Survey and Plan Preparation, Luzon-Leyte HVDC Transmission Line Project (Albay, Camarines Sur, Samar & Leyte)",c:"TRANSCO",s:"Completed",a:3000000},
+    {y:2002,d:"Concreting of Various Barangay Roads, Daraga, Albay",c:"LGU Daraga, Albay",s:"Completed",a:1898477.80},
+    {y:2002,d:"Construction of Steel Bridge along Yawa River, Kilikao, Daraga, Albay",c:"LGU Daraga, Albay",s:"Completed",a:2837707.50},
+    {y:2002,d:"Replacement of 150mm dia PVC Watermain along Apitong & Tangerine Sts.",c:"MWCI Balara, Quezon City",s:"Completed",a:880000},
+    {y:2001,d:"Bulan Airport Development Project — Continuation of Upgrading of Runway Shoulder and Improvement of Drainage System (Negotiated Contract)",c:"DOTC-ATO",s:"Completed",a:1926412.99},
+    {y:2000,d:"Repair of Damaged Port Facilities at the Port of Matnog",c:"Philippine Ports Authority",s:"Completed",a:870000},
+    {y:2000,d:"Legaspi Airport Development Project — Resealing of Runway, Taxiway and Apron Joints/Cracks",c:"DOTC-ATO",s:"Completed",a:993120},
+    {y:2000,d:"Construction of Matagbak River Control, Matagbak, Tabaco, Albay",c:"DPWH",s:"Completed",a:773000},
+    {y:2000,d:"Construction of West Carisac River Control, Carisac, Libon, Albay",c:"DPWH",s:"Completed",a:897220.70},
+    {y:2000,d:"Maintenance Dredging of Berthing Areas at the Port of Legaspi, Legaspi City",c:"DPWH",s:"Completed",a:1150000},
+    {y:2000,d:"Bulan Airport Development Project — Continuation of Upgrading of Runway Shoulder and Improvement of Drainage System",c:"Philippine Ports Authority",s:"Completed",a:1731505.15},
+    {y:1999,d:"Construction of Various School Buildings in the Municipalities of Baao & Bula, Camarines Sur",c:"DPWH",s:"Completed",a:2280002.40},
+    {y:1999,d:"Masbate Airport Development Project — Runway Shoulder Grade Correction, Masbate City",c:"DOTC-ATO",s:"Completed",a:1359504},
+    {y:1998,d:"Masbate Airport — Construction of CHB Perimeter Fence Project, Masbate City",c:"DOTC-ATO",s:"Completed",a:1840515.59},
+    {y:1998,d:"Bulan Airport — Upgrading of Runway Project",c:"DOTC-ATO",s:"Completed",a:1783590.42},
+    {y:1998,d:"Bulan Airport — Upgrading of Runway Project (Supplemental Contract)",c:"DOTC-ATO",s:"Completed",a:1929999},
+    {y:1998,d:"Construction of 44 Units Two-Storey Townhouse, Alcantara St., Banlat Road, Tandang Sora, Quezon City",c:"St. Theresa's College of Quezon City",s:"Completed",a:6300000},
+    {y:1997,d:"350-KV Matnog-Naga Power — Transmission HV Power Lines Project",c:"NPC-ABB",s:"Completed",a:3311996.64},
+    {y:1997,d:"Naga Airport Development Project — Terminal Building",c:"DOTC-ATO",s:"Completed",a:915454.48},
+    {y:1997,d:"Legaspi Airport Development Project — Terminal Building",c:"DOTC-ATO",s:"Completed",a:917339.34},
+    {y:1997,d:"Daet Airport Development Project — Asphalting",c:"DOTC-ATO",s:"Completed",a:915000},
+  ];
+
+  const peso = n => n ? '₱' + n.toLocaleString('en-PH', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : '—';
+
+  const body = document.getElementById('record-body');
+  const stats = document.getElementById('record-stats');
+  const qInput = document.getElementById('rec-search');
+  const cSelect = document.getElementById('rec-client');
+  const sSelect = document.getElementById('rec-status');
+
+  [...new Set(PROJECTS.map(p => p.c))].sort().forEach(c => {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = c;
+    cSelect.appendChild(o);
+  });
+
+  function render() {
+    const q = qInput.value.trim().toLowerCase();
+    const c = cSelect.value;
+    const s = sSelect.value;
+    const rows = PROJECTS.filter(p =>
+      (!q || (p.d + ' ' + p.c).toLowerCase().includes(q)) &&
+      (!c || p.c === c) &&
+      (!s || p.s === s)
+    );
+    body.innerHTML = rows.map(p => `
+      <tr>
+        <td class="col-year">${p.y || '—'}</td>
+        <td>${p.d}</td>
+        <td class="col-client">${p.c}</td>
+        <td><span class="status ${p.s === 'Ongoing' ? 'status-ongoing' : 'status-done'}">${p.s}</span></td>
+        <td class="col-amt">${peso(p.a)}</td>
+      </tr>`).join('') || '<tr><td colspan="5" class="record-empty">No projects match your search. Clear the filters to see the full record.</td></tr>';
+    const total = rows.reduce((t, p) => t + p.a, 0);
+    stats.innerHTML = `
+      <div class="stat"><p class="stat-value">${rows.length}</p><p class="stat-label">Projects listed</p></div>
+      <div class="stat"><p class="stat-value">${peso(Math.round(total)).replace(/\.00$/, '')}</p><p class="stat-label">Combined contract value</p></div>
+      <div class="stat"><p class="stat-value">${rows.filter(p => p.s === 'Ongoing').length}</p><p class="stat-label">Ongoing right now</p></div>`;
+  }
+
+  qInput.addEventListener('input', render);
+  cSelect.addEventListener('change', render);
+  sSelect.addEventListener('change', render);
+  render();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
